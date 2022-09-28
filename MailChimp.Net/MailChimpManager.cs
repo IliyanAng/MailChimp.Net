@@ -63,6 +63,7 @@ namespace MailChimp.Net
             this.Templates = new TemplateLogic(MailChimpOptions);
             this.WebHooks = new WebHookLogic(MailChimpOptions);
             this.BatchWebHooks = new BatchWebHookLogic(MailChimpOptions);
+            this.ConnectedWebsites = new ConnectedWebsitesLogic(MailChimpOptions);
         }
 
 #if NET_CORE
@@ -102,6 +103,8 @@ namespace MailChimp.Net
             this.Templates = new TemplateLogic(MailChimpOptions);
             this.WebHooks = new WebHookLogic(MailChimpOptions);
             this.BatchWebHooks = new BatchWebHookLogic(MailChimpOptions);
+            this.ConnectedWebsites = new ConnectedWebsitesLogic(MailChimpOptions);
+
         }
 
 #else
@@ -141,6 +144,7 @@ namespace MailChimp.Net
             this.Templates = new TemplateLogic(MailChimpOptions);
             this.WebHooks = new WebHookLogic(MailChimpOptions);
             this.BatchWebHooks = new BatchWebHookLogic(MailChimpOptions);
+            this.ConnectedWebsites = new ConnectedWebsitesLogic(MailChimpOptions);
         }
 #endif
 
@@ -305,6 +309,8 @@ namespace MailChimp.Net
         /// Gets the logic to access mail chimp web hooks
         /// </summary>
         public IWebHookLogic WebHooks { get; }
+
+        public IConnectedWebsitesLogic ConnectedWebsites { get; }
 
 
         public IBatchWebHookLogic BatchWebHooks { get; }
