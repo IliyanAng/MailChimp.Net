@@ -13,6 +13,8 @@ namespace MailChimp.Net.Logic
 {
     internal class ConnectedWebsitesLogic : BaseLogic, IConnectedWebsitesLogic
     {
+        public static string Dummy = "qko";
+
         public ConnectedWebsitesLogic(MailChimpOptions mailChimpConfiguration)
             : base(mailChimpConfiguration)
         {
